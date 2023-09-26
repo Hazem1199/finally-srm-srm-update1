@@ -161,7 +161,7 @@ async function showInvoice(value) {
         const tbodyInvoice = document.querySelector('.tbody2');
         // tbodyInvoice.innerHTML = '';
         // Sort the invoices by timestamp
-        Invoices.sort((a, b) => new Date(a.Timestamp) - new Date(b.Timestamp));
+        Invoices.sort((a, b) => new Date(b.Timestamp) - new Date(a.Timestamp));
 
         Invoices.forEach(element => {
             if (value == element.ID) {
