@@ -145,6 +145,20 @@ myButton.addEventListener('click', async () => {
 //     this.classList.toggle("bi-eye");
 // });
 
+const passwordInput = document.querySelector('#password');
+const passwordEye = document.querySelector('.password-eye');
+
+passwordEye.addEventListener('click', function () {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordEye.classList.add('fa fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        passwordEye.classList.remove('fa fa-eye-slash');
+    }
+});
+
+
 
 
 form.addEventListener('submit', (e) => {

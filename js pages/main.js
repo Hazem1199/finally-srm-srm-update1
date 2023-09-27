@@ -100,12 +100,20 @@ async function getData(id) {
 
 // async function getData() {
 //   console.log("start fetch data");
-//   const url = `https://script.google.com/macros/s/AKfycbxbIh1P4jMmH5GDvpE44wHgu-g1JPUvvK10gGcOyBPdUi8fTt6kGDBuJ-3Eh6ydkuMX9A/exec`;
+//   const url = `http://localhost/SRM/Fetch.php`;
 //   response = await fetch(url);
 //   data = await response.json();
 //   console.log("done fetch data");
 //   return data;
 // }
+
+// async function getData() {
+//   fetch('http://localhost/SRM/Fetch.php')
+//   .then(response => response.text())
+//   .then(data => console.log(data))
+//   .catch(error => console.error(error));
+// }
+
 
 // async function getAllCards() {
 //   const url = `https://script.google.com/macros/s/AKfycbwqja3nFfJIBT0WFGthzn9PdnykwSVjAI3q3dVvtIdo4AbXrJdozLHabxfUkuwbVtZV3Q/exec`;
@@ -217,7 +225,7 @@ async function display(value) {
       Complaintss.innerHTML = user.Complaintss;
     }
   });
-  
+
   // hide();
 }
 
@@ -248,7 +256,7 @@ invoiceBtn.addEventListener('click', () => {
   if (id != null || id != "") {
     console.log("ifid" + id);
     openInvoice(id);
-    
+
   }
 
   // const savedDataReq = sessionStorage.getItem("myDataReq");
@@ -259,7 +267,8 @@ invoiceBtn.addEventListener('click', () => {
   if (dataSto2.ID != "") {
     // numRequest.innerHTML = dataSto2.requestCount;
     openInvoice(dataSto2.ID);
-  }});
+  }
+});
 
 
 // plan function 
@@ -399,7 +408,7 @@ window.onload = function () {
 
 
 const logOut = document.querySelector('.log_out');
-logOut.addEventListener('click' , () =>{
+logOut.addEventListener('click', () => {
   sessionStorage.clear();
   localStorage.clear();
 })

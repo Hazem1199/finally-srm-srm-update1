@@ -82,3 +82,17 @@ input {
 form i {
     cursor: pointer;
 }
+
+
+.password-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-eye .fa-solid.fa-eye {
+    color: black;
+  }
+  
